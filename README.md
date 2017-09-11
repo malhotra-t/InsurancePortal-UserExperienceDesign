@@ -1,1 +1,2 @@
 # InsurancePortal-UserExperienceDesign
+This project consists of information architecture, wireframes and prototypes for an organization's internal insurance portal. Features include view, compare, subscribe from the available insurance plans. Also, employees can view their historyy of subscriptions and claims. Incorporated the usability research methods before implementing the final HTML/CSS graphical user interface. Auromated the testing of final interface using Selenium Web Driver and Web IDE.

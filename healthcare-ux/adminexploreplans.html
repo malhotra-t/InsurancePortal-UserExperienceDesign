@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="exploreplans.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <style>
+    #save{
+      display:none;
+    }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar starts -->
+    <nav class="navbar navbar-dark bg-primary navbar-fixed-top">
+      <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button>
+      <div class="collapse navbar-toggleable-md" id="navbarResponsive">
+        <a class="navbar-brand" href="MyPlan.html"><span class="fa fa-home"></span> TSP Healthcare</a>
+
+        <ul class="nav navbar-nav float-lg-right">
+          <li class="nav-item"><a class="nav-link" href="login.html"><span class="fa fa-sign-out"></span> Logout</a></li>
+        </ul>
+        <form class="form-inline float-lg-right">
+          <input class="form-control" type="text" placeholder="Search">
+          <button class="btn btn-primary" type="submit"><span class="fa fa-search"></span></button>
+        </form>
+
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar ends -->
+    <div class="row" id="panel">
+      <div class="col-lg-2 offset-lg-8 top">
+        <button class="btn btn-primary top disabled" id="compareSelection" data-toggle="tooltip" data-placement="bottom" title="Check at least 2 plans to enable comparison" onclick="gotoComparePage()">Compare Selection</button>
+      </div>
+      <div class="col-lg-1 top">
+        <button type="button top" class="btn btn-primary top clear-selection">Clear Selection</button>
+      </div>
+    </div>
+    <br/>
+
+
+
+<!-- Main container-->
+    <div class="container-fluid">
+
+        <br/><br/><br/><br/>
+      <!-- Main container-->
+      <div class="row">
+        <!-- Row is divided in 2 columns of size 3 and 9-->
+        <!-- Column of Size 3 Starts-->
+        <div class="col-lg-3">
+
+          <!-- A1 starts-->
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="list-group">
+                <a href="dashboard.html" class="list-group-item"><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard</a>
+                <a href="adminexploreplans.html" class="list-group-item active"><i class="fa fa-search" aria-hidden="true"></i> Explore Plans</a>
+                <a href="ADD_PLAN.html" class="list-group-item"><i class="fa fa-plus-circle" aria-hidden="true"></i> Add Plans</a>
+              </div>
+            </div>
+          </div>
+          <!-- A1 ends-->
+          <br/>
+          <!-- A2 starts-->
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Sort By
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Lowest Monthly Payment</a>
+                  <a class="dropdown-item" href="#">Lowest Deductible</a>
+                  <a class="dropdown-item" href="#">Worst-case Scenario</a>
+                  <a class="dropdown-item" href="#">Cost Sharing Reduction Available</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- A2 ends-->
+
+          <br/>
+
+          <!-- A3 starts-->
+          <div class="row">
+            <div class="col-lg-12">
+              <h5><span class="fa fa-filter"></span> Filter By</h5>
+            </div>
+
+            <br/>
+            <br/>
+            <!--Filter 1 starts-->
+              <div class="col-lg-12">
+                Networks:
+                <div class="form-check network-set">
+                  <!-- This will come from ajax+json -->
+                </div>
+
+              </div>
+              <!--Filter 1 ends-->
+
+              <!--Filter 2 starts-->
+              <div class="col-lg-12">
+                Insurance Companies:
+                <div class="form-check company-name-set">
+                  <!-- This will come from ajax+json -->
+                  <!--<label class="form-check-label company-name-item-label">
+                    <input class="form-check-input company-name-item-input" type="checkbox" value="">
+                    Tufts Health Public Plans
+                  </label>-->
+                </div>
+
+
+              </div>
+              <!--Filter 2 ends-->
+
+              <!--Filter 3 starts-->
+              <div class="col-lg-12">
+                Plan Types:
+
+                <div class="row plan-type-set">
+
+                  <!-- This will com from ajax+json -->
+                  <!--<div class="col-lg-6">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="">
+                        Bronze
+                      </label>
+                    </div>
+                  </div>-->
+
+                </div>
+              </div>
+              <!--Filter 3 ends-->
+
+            </div>
+          <!-- A3 ends-->
+
+          <br/>
+
+        </div>
+        <!-- Column of Size 3 Ends-->
+
+        <!-- Column of Size 9-->
+        <div class="col-lg-9 plan-container">
+
+          <!-- Plans will be populated via ajax-->
+          <div class="col-lg-12 plan-container">
+            <div class="card plan-parent">
+              <div class="card-header">
+                <div class="col-lg-4">      Plan Name: <span class="plan-name">Family Pro</span>
+                </div>
+                <div class="col-lg-4"><span class="glyphicon glyphicon-record"></span>Plan Type: <span class="plan-type">Silver</span>
+
+                </div>
+                <div class="col-lg-2" id="edit"><span class="fa fa-pencil-square-o fa-1x" onclick="toggle(this)"></span> Edit
+                </div>
+                <div class="col-lg-2" id="save" ><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</div>
+              </div>
+              <div class="card-block">
+                <div class="card-deck-wrapper">
+                  <div class="card-deck">
+                    <div class="card">
+                      <div class="card-block">
+                        <h4 class="card-title">Monthly Premium</h4>
+                        <h5 class="card-text text-success monthly-premium"><span id="monthly-premium">$400</span></h5>
+                        <br>
+                        <h4 class="card-title">Deductible</h4>
+                        <h5 class="card-text text-success deductible" id="deductible"><span>$1000</span></h5>
+                      </div></div><div class="card">
+                        <div class="card-block">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th>Services</th>
+                                <th>You Pay</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Doctor Visit</td>
+                                <td>$50 after deductible copay</td>
+                              </tr>
+                              <tr>
+                                <td>Specialist Visit</td>
+                                <td>$75 after deductible copay</td>
+                              </tr>
+                              <tr>
+                                <td></td>
+                                <td>No data available.</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-3"></div>
+                  <div class="col-lg-3"></div>
+                  <div class="col-lg-3 col-lg-offset-6">
+                    <a class="brand" href="PlanDetails.html"><span class="fa fa-bars"></span> Details</a>
+                  </div><div class="col-lg-3">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input compare-checkbox" type="checkbox" value="">          Check to compare        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card plan-parent">
+                  <div class="card-header">
+                    <div class="col-lg-4">      Plan Name: <span class="plan-name">Health First</span></div>
+                    <div class="col-lg-4"><span class="glyphicon glyphicon-record"></span>Plan Type: <span class="plan-type">Gold</span></div>
+                    <div class="col-lg-2" id="edit"><span class="fa fa-pencil-square-o fa-1x" onclick="toggle(this)"></span> Edit </div>
+                    <div class="col-lg-2" id="save" ><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</div>
+                  </div>
+                  <div class="card-block">
+
+                    <div class="card-deck-wrapper">
+                      <div class="card-deck">
+                        <div class="card">
+                          <div class="card-block">
+                            <h4 class="card-title">Monthly Premium</h4>
+                            <h5 class="card-text text-success monthly-premium">$600</h5>
+                            <br>
+                            <h4 class="card-title">Deductible</h4>
+                            <h5 class="card-text text-success deductible">$8500</h5>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-block">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th>Services</th>
+                                  <th>You Pay</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Doctor Visit</td>
+                                  <td>$50 after deductible copay</td>
+                                </tr>
+                                <tr>
+                                  <td>Specialist Visit</td>
+                                  <td>$75 after deductible copay</td>
+                                </tr>
+                                <tr>
+                                  <td></td>
+                                  <td>No data available.</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-3"></div><div class="col-lg-3 col-lg-offset-6">
+                      <a class="brand" href="PlanDetails.html"><span class="fa fa-bars"></span> Details</a></div>
+                      <div class="col-lg-3">
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input compare-checkbox" type="checkbox" value="">          Check to compare        </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+    <!-- <script src="exploreplans.js"></script> -->
+    <script src="adminexplore.js"></script>
+  </body>
+
+</html>

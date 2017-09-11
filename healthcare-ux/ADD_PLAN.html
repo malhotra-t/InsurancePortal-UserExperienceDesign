@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark bg-primary">
+      <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button>
+      <div class="collapse navbar-toggleable-md" id="navbarResponsive">
+        <a class="navbar-brand" href="dashboard.html"><span class="fa fa-home"></span> TSP Healthcare</a>
+
+        <ul class="nav navbar-nav float-lg-right">
+          <li class="nav-item"><a class="nav-link" href="login.html"><span class="fa fa-sign-out"></span> Logout</a></li>
+        </ul>
+        <form class="form-inline float-lg-right">
+          <input class="form-control" type="text" placeholder="Search">
+          <button class="btn btn-primary" type="submit"><span class="fa fa-search"></span></button>
+        </form>
+      </div>
+    </nav>
+
+<br/>
+<!-- Main container-->
+    <div class="container-fluid">
+
+      <!-- Row-->
+      <div class="row">
+        <!-- Row is divided in 2 columns of size 3 and 9-->
+        <!-- Column of Size 3 Starts-->
+        <div class="col-lg-3">
+
+          <!-- A1 starts-->
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="list-group">
+                <a href="dashboard.html" class="list-group-item"><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard</a>
+                <a href="adminexploreplans.html" class="list-group-item"><i class="fa fa-search" aria-hidden="true"></i> Explore Plans</a>
+                <a href="ADD_PLAN.html" class="list-group-item active"><i class="fa fa-plus-circle" aria-hidden="true"></i> Add Plans</a>
+              </div>
+            </div>
+          </div>
+          <!-- A1 ends-->
+        </div>
+        <!-- Column of Size 3 Ends-->
+
+        <!-- Column of Size 9-->
+        <div class="col-lg-9">
+
+          <!-- Plan Starts-->
+          <div class="card">
+            <div class="card-header">
+              <div class="col-lg-2">
+                Add Plan
+              </div>
+
+            </div>
+            <div class="card-block">
+              <div class="card-deck-wrapper">
+                <div class="card-deck">
+                  <!--form starts-->
+                  <form>
+                  <div class="form-group row">
+                    <label for="planName" class="col-xs-2 col-form-label">Plan Name</label>
+                    <div class="col-xs-10">
+                      <input class="form-control" type="text" value="" id="planName">
+                    </div>
+                    </div>
+                    <div class="form-group row">
+                    <label for="planType" class="col-xs-2 col-form-label">Plan Type</label>
+                    <div class="col-xs-10">
+                      <input class="form-control" type="text" value="" id="planType">
+                    </div>
+                    </div>
+                    <div class="form-group row">
+                    <label for="networkName" class="col-xs-2 col-form-label">Network Name</label>
+                    <div class="col-xs-10">
+                      <input class="form-control" type="text" value="" id="networkName">
+                    </div>
+                    </div>
+                    <div class="form-group row">
+                    <label for="copay" class="col-xs-2 col-form-label">Copay</label>
+                    <div class="col-xs-10">
+                      <input class="form-control" type="text" value="" id="copay">
+                    </div>
+                    </div>
+                    <div class="form-group row">
+                    <label for="deductible" class="col-xs-2 col-form-label">Deductible</label>
+                    <div class="col-xs-10">
+                      <input class="form-control" type="tel" value="" id="deductible">
+                    </div>
+                    </div>
+                    <div class="form-group row">
+                    <label for="details" class="col-xs-2 col-form-label">Details</label>
+                    <div class="col-xs-10">
+                      <textarea class="form-control" rows="4" cols="50" value="" id="details"></textarea>
+                    </div>
+                    </div>
+                    <input class="btn btn-primary" type="submit" value="Submit">
+                  </form>
+                  <!--form ends-->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Plan Ends-->
+
+
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+  </body>
+
+</html>

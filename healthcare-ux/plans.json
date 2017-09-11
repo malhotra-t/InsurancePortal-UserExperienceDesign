@@ -1,0 +1,53 @@
+jsonCallback(
+  {
+    "plans":[
+            { "planId":1,
+              "planName":"Family Pro",
+              "planType":"Gold",
+              "network":"HMO",
+              "companyName":"Tufts Health Public Plan",
+              "summary":{
+                "monthlyPayment":302,
+                "deductible":150,
+                "services":[{"serviceName":"Doctor Visit", "youPay":"$50 copay"},
+                          {"serviceName":"Specialist Visit", "youPay":"$75 copay"},
+                          {"serviceName":"Emergency Room", "youPay":"30% after deductible coinsurance"},
+                          {"serviceName":"Generic Drugs", "youPay":"$15 copay"}
+                        ]
+              }
+
+            },
+            { "planId":2,
+              "planName":"Health First",
+              "planType":"Gold",
+              "network":"PCO",
+              "companyName":"Tufts Health Public Plan",
+              "summary":{
+                "monthlyPayment":600,
+                "deductible":8500,
+                "services":[{"serviceName":"Doctor Visit", "youPay":"$25 copay"},
+                          {"serviceName":"Specialist Visit", "youPay":"$35 copay"},
+                          {"serviceName":"Emergency Room", "youPay":"25% after deductible coinsurance"},
+                          {"serviceName":"Generic Drugs", "youPay":"$10 copay"}
+                        ]
+              }
+            },
+            { "planId":3,
+              "planName":"Ultra Active Pro",
+              "planType":"Platinum",
+              "network":"HMO",
+              "companyName":"Tufts Health Public Plan",
+              "summary":{
+                "monthlyPayment":600,
+                "deductible":800,
+                "services":[{"serviceName":"Doctor Visit", "youPay":"$20 copay"},
+                          {"serviceName":"Specialist Visit", "youPay":"$30 copay"},
+                          {"serviceName":"Emergency Room", "youPay":"30% after deductible coinsurance"},
+                          {"serviceName":"Generic Drugs", "youPay":"$15 copay"}
+                        ]
+              }
+
+            }
+          ]
+  }
+);

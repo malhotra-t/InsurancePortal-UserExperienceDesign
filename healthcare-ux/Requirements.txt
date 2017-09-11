@@ -1,0 +1,24 @@
+Pending
+c. Explore - New plans in json, SORT - Last
+d. Add plan - validation conditions, message, redirect
+e. Home (MyPlan) -  enrolled since, expiry date, claim amount available
+f. Plan logo
+g. Compare Selection button in exploreplans.html redirecting even when disabled
+
+Insurance Portal - Web Pages
+
+Employee
+
+1. Login
+2. Home (MyPlan)
+3. Explore Plans
+4. Plan Details
+5. Compare Plans
+6. History - Claims, Subscriptions
+
+Employer
+
+1. Login
+2. Dashboard
+3. Explore Plans
+4. Add Plan
